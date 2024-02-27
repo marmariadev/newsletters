@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const { mongoURI } = require('./config');
 
-const connect = async () => {
+const database = async () => {
     try {
         await mongoose.connect(mongoURI);
         console.log('Connected to MongoDB Atlas');
@@ -12,4 +12,4 @@ const connect = async () => {
     }
 };
 
-module.exports = { connect };
+module.exports = database;

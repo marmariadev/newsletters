@@ -1,3 +1,3 @@
 // /index.js
-const expressServer = require('./src/server');
-expressServer.start();
+const serverStart = require('./src/server');
+serverStart();

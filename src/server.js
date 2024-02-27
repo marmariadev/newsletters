@@ -1,11 +1,11 @@
 // /src/server.js
 const app = require('./app');
 const { port } = require('./config/config');
-const database = require('./config/database');
+const databaseConnect = require('./config/database');
 
-const start = async () => {
+const serverStart = async () => {
     try {
-        await database.connect();
+        await databaseConnect();
         app.listen(port, () => {
             console.log(`App listening on port ${port}`);
         });
@@ -15,4 +15,4 @@ const start = async () => {
     }
 };
 
-module.exports = { start };
+module.exports = serverStart;
